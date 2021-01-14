@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Aegro - Software de Gestão Agrícola`,
+    description: `Aegro é o software de gestão agrícola ideal para fazendas e consultorias. Caderno de campo, máquinas agrícolas, estoque, financeiro e relatórios em um único sistema.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
