@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import logo from '../images/logo.svg'
 import NavLink from "./NavLink"
+import StyledButton from "./StyledButton"
 
 const Header = () => {
 
@@ -55,9 +56,9 @@ const Header = () => {
               <NavLink to="/contato">
                 Contato
               </NavLink>
-              <OutlinedNavLink to="https://app.aegro.com.br/login" target="_blank">
-                Teste Gratis
-              </OutlinedNavLink>
+              <StyledButton to="https://app.aegro.com.br/login" target="_blank" variant="outlined">
+                Teste Grátis
+              </StyledButton>
               <NavLink to="https://app.aegro.com.br/login" target="_blank">
                 Login
               </NavLink>
