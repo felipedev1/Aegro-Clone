@@ -18,7 +18,7 @@ const FourthSection = () => {
             <MainSectionContent>
               <div style={{flex: '1 1 0%'}}>
                 <Title variant="h1" component="h1">
-                  Estamos presentes <br/> no Brasil inteiro
+                  Estamos presentes no&nbsp;Brasil inteiro
                 </Title>
                 <Description variant="body1" compontent="p">
                   E ajudamos a gerenciar muitas fazendas. Nos esforçamos todos os dias para entregar sempre as melhores soluções para os nossos clientes e ajudar o agronegócio a evoluir.
