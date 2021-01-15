@@ -1,4 +1,6 @@
 import React from "react"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components'
 import Link from 'gatsby'
 import Layout from "../components/Layout"
@@ -9,6 +11,7 @@ import { Container } from "@material-ui/core"
 import { TypographyH1 } from "../components/SharedStyledComponents"
 import SecondSection from "../components/Home/SecondSection"
 import ThirdSection from "../components/Home/ThirdSection"
+import FourthSection from "../components/Home/FourthSection"
 
 const IndexPage = () => {
   return (
@@ -35,6 +38,7 @@ const IndexPage = () => {
       </BannerBackground>
       <SecondSection />
       <ThirdSection />
+      <FourthSection />
     </Layout>
   )
 }
