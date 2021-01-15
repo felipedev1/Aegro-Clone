@@ -54,13 +54,16 @@ const useStyles = makeStyles({
   },
   textPrimary: {
     color: '#00C65E'
+  },
+  textSecondary: {
+    color: '#FFF'
   }
 }, { name: 'MuiButton' });
 
 export const ButtonStyles = styled(Button)`
   font-size: 15px;
   max-height: 48px;
-  font-weight: 500;
+  font-weight: 600;
   padding-top: 7px;
   padding-left: 19px;
   padding-right: 19px;

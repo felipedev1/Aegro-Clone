@@ -12,6 +12,7 @@ import { TypographyH1 } from "../components/SharedStyledComponents"
 import SecondSection from "../components/Home/SecondSection"
 import ThirdSection from "../components/Home/ThirdSection"
 import FourthSection from "../components/Home/FourthSection"
+import FifthSection from "../components/Home/FifthSection";
 
 const IndexPage = () => {
   return (
@@ -39,6 +40,7 @@ const IndexPage = () => {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
+      <FifthSection />
     </Layout>
   )
 }

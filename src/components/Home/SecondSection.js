@@ -43,8 +43,7 @@ const SecondSection = () => {
               <Description variant="body1" component="p">
                 centralizando todas as informações em um software de gestão agrícola que dá ao produtor rural mais controle sobre os investimentos e os processos produtivos da fazenda.
               </Description>
-              <ButtonToProduct to="/produto"
-                disableElevation 
+              <ButtonToProduct to="/produto" 
                 variant="text" 
                 color="primary"
                  >
