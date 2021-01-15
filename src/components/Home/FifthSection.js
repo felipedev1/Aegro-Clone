@@ -37,7 +37,7 @@ const FifthSection = () => {
           <Title variant="h1" compontent="h1">
             Programa de Parcerias
           </Title>
-          <Description>
+          <Description variant="body1" component="p">
             Seja um consultor Aegro e atenda sua carteira de clientes com o software de gestão agrícola mais utilizado do Brasil.
           </Description>
           <div>

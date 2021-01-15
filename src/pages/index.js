@@ -14,6 +14,7 @@ import ThirdSection from "../components/Home/ThirdSection"
 import FourthSection from "../components/Home/FourthSection"
 import FifthSection from "../components/Home/FifthSection";
 import SixthSection from "../components/Home/SixthSection";
+import SeventhSection from "../components/Home/SeventhSection";
 
 const IndexPage = () => {
   return (
@@ -43,6 +44,7 @@ const IndexPage = () => {
       <FourthSection />
       <FifthSection />
       <SixthSection />
+      <SeventhSection />
     </Layout>
   )
 }
