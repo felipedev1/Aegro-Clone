@@ -8,6 +8,7 @@ import BannerBackground from "../components/Home/BannerBackground"
 import { Container } from "@material-ui/core"
 import { TypographyH1 } from "../components/SharedStyledComponents"
 import SecondSection from "../components/Home/SecondSection"
+import ThirdSection from "../components/Home/ThirdSection"
 
 const IndexPage = () => {
   return (
@@ -17,14 +18,14 @@ const IndexPage = () => {
         <BannerContainer>
           <Container maxWidth="lg">
             <BannerWrapper>
-              <TypographyH1 variant="h1" component="h1">
+              <FirstTitle variant="h1" component="h1">
                 Evoluir a agricultura
                 <br/>
                 é o que nos move.
-              </TypographyH1>
-              <SecondTypographyH1 variant="h1" component="h1">
+              </FirstTitle>
+              <SecondTitle variant="h1" component="h1">
                 Por isso, somos parceiros de quem produz.
-              </SecondTypographyH1>
+              </SecondTitle>
               <StyledButton component={Link} disableElevation variant="contained" color="primary" >
                 Conheça o Aegro
               </StyledButton>
@@ -33,6 +34,7 @@ const IndexPage = () => {
         </BannerContainer>
       </BannerBackground>
       <SecondSection />
+      <ThirdSection />
     </Layout>
   )
 }
@@ -57,8 +59,14 @@ export const BannerWrapper = styled.div`
   }
 `
 
-export const SecondTypographyH1 = styled(TypographyH1)`
+export const FirstTitle = styled(TypographyH1)`
+  margin: 0 auto 0 0;
+  max-width: 600px;
+`
+
+export const SecondTitle = styled(TypographyH1)`
   margin-bottom: 55px;
+  max-width: 600px;
 `
 
 export default IndexPage
