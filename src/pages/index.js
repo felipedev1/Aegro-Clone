@@ -5,7 +5,9 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import StyledButton from '../components/StyledButton'
 import BannerBackground from "../components/Home/BannerBackground"
-import { Button, Container, Typography } from "@material-ui/core"
+import { Container } from "@material-ui/core"
+import { TypographyH1 } from "../components/SharedStyledComponents"
+import SecondSection from "../components/Home/SecondSection"
 
 const IndexPage = () => {
   return (
@@ -30,6 +32,7 @@ const IndexPage = () => {
           </Container>
         </BannerContainer>
       </BannerBackground>
+      <SecondSection />
     </Layout>
   )
 }
@@ -51,19 +54,6 @@ export const BannerWrapper = styled.div`
   @media (min-width: 600px)
   {
     margin-left: 38px;
-  }
-`
-
-export const TypographyH1 = styled(Typography)`
-  max-width: 600px;
-  margin: 0 auto 0 0;
-  font-size: 26px;
-  font-weight: bold;
-  line-height: 1;
-  letter-spacing: 0;
-  @media (min-width: 600px)
-  {
-    font-size: 40px;
   }
 `
 

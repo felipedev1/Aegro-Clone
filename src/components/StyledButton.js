@@ -48,6 +48,12 @@ const useStyles = makeStyles({
       backgroundColor: 'rgba(0, 0, 0, 0.04)',
       borderColor: '#FFF'
     }
+  },
+  text: {
+    padding: '6px 8px'
+  },
+  textPrimary: {
+    color: '#00C65E'
   }
 }, { name: 'MuiButton' });
 
