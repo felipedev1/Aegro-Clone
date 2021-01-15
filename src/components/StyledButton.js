@@ -4,13 +4,12 @@ import { Link } from 'gatsby'
 import { Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
-const StyledButton = ({children, to, ...rest}) => {
+const StyledButton = ({children, ...rest}) => {
   const classes = useStyles()
   return (
     <ButtonStyles 
       color="inherit" 
       component={Link} 
-      to={to} 
       disableElevation 
       {...rest}
     >
