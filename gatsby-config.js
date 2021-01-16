@@ -24,6 +24,18 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Aegro - Software de Gestão Agrícola`,
+        short_name: `Aegro`,
+        start_url: `/`,
+        background_color: `#00C65E`,
+        theme_color: `#FFF`,
+        display: `minimal-ui`,
+        icon: 'src/images/favicon.png',
+      },
+    },
   ],
 }
