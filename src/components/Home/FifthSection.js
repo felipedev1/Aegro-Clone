@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import BackgroundImage from 'gatsby-background-image'
 import { Button, Container, Typography } from '@material-ui/core'
-import { TypographyH1 } from '../SharedStyledComponents'
+import { TypographyH1 } from '../sharedStyledComponents'
 import StyledButton from '../StyledButton'
 import arrowTopRight from '../../images/arrow-top-right.svg'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Typography } from '@material-ui/core'
 import styled from 'styled-components'
-import { TypographyH1 } from '../SharedStyledComponents'
+import { TypographyH1 } from '../sharedStyledComponents'
 import Slider from 'react-slick'
 import Feedback from './Feedback'
 import VitorFernandoImg from '../../images/VitorFernando.png'

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Container, Typography } from '@material-ui/core'
 
 import StyledButton from '../StyledButton'
-import { TypographyH1 } from '../SharedStyledComponents'
+import { TypographyH1 } from '../sharedStyledComponents'
 import arrowRight from '../../images/arrow-right.svg'
 import useViewport from '../../utils/useViewport'
 

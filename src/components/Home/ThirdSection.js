@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { AppBar, Container, Tab } from '@material-ui/core'
 
 import StyledButton from '../StyledButton'
-import { TypographyH1 } from '../SharedStyledComponents'
+import { TypographyH1 } from '../sharedStyledComponents'
 import { TabList, TabContext } from '@material-ui/lab'
 import DemonstrationTabPanel from './DemonstrationTabPanel'
 import { graphql, useStaticQuery } from 'gatsby'

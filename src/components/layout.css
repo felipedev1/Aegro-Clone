@@ -1,5 +1,5 @@
 html, body {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat' !important;
   margin: 0;
   padding: 0;
   background-color: #00C65E;

@@ -3,7 +3,7 @@ import { Container, Grid } from '@material-ui/core'
 import styled from 'styled-components'
 import arrowTopRight from '../../images/arrow-top-right-green.svg'
 import lavoura from '../../images/lavoura10.png'
-import { TypographyH1 } from '../SharedStyledComponents'
+import { TypographyH1 } from '../sharedStyledComponents'
 import StyledButton from '../StyledButton'
 
 const SixthSection = () => {

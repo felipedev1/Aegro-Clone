@@ -2,7 +2,7 @@ import { Container, Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import { TypographyH1 } from '../SharedStyledComponents'
+import { TypographyH1 } from '../sharedStyledComponents'
 import StyledButton from '../StyledButton'
 import arrowTopRight from '../../images/arrow-top-right-green.svg'
 
