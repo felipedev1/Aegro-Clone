@@ -32,9 +32,9 @@ const IndexPage = () => {
               <SecondTitle variant="h1" component="h1">
                 Por isso, somos parceiros de quem produz.
               </SecondTitle>
-              <StyledButton component={Link} disableElevation variant="contained" color="primary" >
+              <ButtonToApp to="/produto" variant="contained" color="primary" >
                 Conheça o Aegro
-              </StyledButton>
+              </ButtonToApp>
             </BannerWrapper>
           </Container>
         </BannerContainer>
@@ -49,7 +49,7 @@ const IndexPage = () => {
   )
 }
 
-export const BannerContainer = styled.div`
+const BannerContainer = styled.div`
   height: 100vh;
   display: flex;
   max-height: 1080px;
@@ -59,7 +59,7 @@ export const BannerContainer = styled.div`
   justify-content: center;
 `
 
-export const BannerWrapper = styled.div`
+const BannerWrapper = styled.div`
   margin-top: 45px;
   margin-left: 12px;
 
@@ -69,14 +69,34 @@ export const BannerWrapper = styled.div`
   }
 `
 
-export const FirstTitle = styled(TypographyH1)`
+const FirstTitle = styled(TypographyH1)`
   margin: 0 auto 0 0;
   max-width: 600px;
+
+  @media (max-width: 959.95px) {
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
 `
 
-export const SecondTitle = styled(TypographyH1)`
+const SecondTitle = styled(TypographyH1)`
   margin-bottom: 55px;
   max-width: 600px;
+
+  @media (max-width: 959.95px) {
+    margin-bottom: 90px;
+  }
+`
+
+const ButtonToApp = styled(StyledButton)`
+  @media (max-width: 959.95px) {
+    font-size: 18px;
+    padding-top: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+    letter-spacing: 2.4px;
+    padding-bottom: 7px;
+  }
 `
 
 export default IndexPage

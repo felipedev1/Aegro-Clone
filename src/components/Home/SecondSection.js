@@ -2,29 +2,30 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { Container, Typography } from '@material-ui/core'
-import BackgroundImage from 'gatsby-background-image'
 
 import StyledButton from '../StyledButton'
 import { TypographyH1 } from '../SharedStyledComponents'
 import arrowRight from '../../images/arrow-right.svg'
+import useViewport from '../../utils/useViewport'
 
 const SecondSection = () => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        desktop: file(relativePath: { eq: "image-harvest.jpg" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `
-  )
+  const { width } = useViewport()
+
+  const data = useStaticQuery(graphql`
+  query {
+    mobileImage: file(relativePath: { eq: "mobile-haverst.jpg" }) {
+      publicURL
+    }
+    desktopImage: file(relativePath: { eq: "image-harvest.jpg" }) {
+      publicURL
+    }
+  }
+`
+)
 
   // Set ImageData.
-  const imageData = data.desktop.childImageSharp.fluid
+  const desktopImage = data.desktopImage.publicURL
+  const mobileImage = data.mobileImage.publicURL
 
   return (
     <StyledSecondSection>
@@ -57,11 +58,15 @@ const SecondSection = () => {
         </div>
       </Division>
       <Division>
-        <StyledBackground
-          Tag="div"
-          fluid={imageData}
-          backgroundColor={`#00C65E`}
-        />
+        {width < 600 ?
+        (
+          <BackgroundMobile>
+            <img src={mobileImage} alt="Colheiteira sobre o campo." />
+          </BackgroundMobile>
+        ) : (
+            <StyledBackground desktopImage={desktopImage}  />
+        )}
+        
       </Division>
     </StyledSecondSection>
   )
@@ -85,6 +90,7 @@ const StyledSecondSection = styled.section`
 const Division = styled.div`
   width: 100vw;
   display: flex;
+  overflow: hidden;
 
   @media (min-width: 600px) {
     width: 50vw;
@@ -101,6 +107,11 @@ const ContentWrapper = styled.div`
 
   @media (min-width: 600px) {
     margin-left: 38px;
+  }
+
+  @media (max-width: 599.95px) {
+    max-height: 640px;
+    min-height: 600px;
   }
 `
 
@@ -128,13 +139,23 @@ const ButtonToProduct = styled(StyledButton)`
   margin-left: -6px;
 `
 
-const StyledBackground = styled(BackgroundImage)`
+const StyledBackground = styled.div`
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: url(${props => props.desktopImage});
   height: 100%;
   width: 100%;
   min-height: 640px;
+`
+
+const BackgroundMobile = styled.div`
+  display: flex;
+
+  img {
+    width: 100%;
+    align-self: flex-start;
+  }
 `
 
 export default SecondSection

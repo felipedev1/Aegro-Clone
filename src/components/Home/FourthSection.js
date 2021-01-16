@@ -98,6 +98,12 @@ const ContentWrapper = styled.div`
   display: flex;
   padding-left: 40px;
   padding-right: 40px;
+
+  @media (max-width: 959.95px){
+    padding-left: 12px;
+    padding-right: 12px;
+    flex-direction: column;
+  }
 `
 
 const MainSectionContent = styled.div`

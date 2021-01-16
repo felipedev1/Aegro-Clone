@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react"
-import { AppBar, Container } from '@material-ui/core'
+import { AppBar, Container, Dialog, IconButton } from '@material-ui/core'
 import styled from 'styled-components'
+import MenuIcon from '@material-ui/icons/Menu'
+import CloseIcon from '@material-ui/icons/Close'
 
 import logo from '../images/logo.svg'
 import NavLink from "./NavLink"
-import StyledButton from "./StyledButton"
+import Navigation from "./Navigation"
 
 const Header = () => {
 
   const [atPageTop, setAtPageTop] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     function handleScroll() {
@@ -23,6 +26,14 @@ const Header = () => {
     }
   }, [atPageTop])
 
+  const handleOpenMenu = () => {
+    setMenuOpen(true);
+  };
+
+  const handleCloseMenu = () => {
+    setMenuOpen(false);
+  };
+
 
   return (
     <AppBar elevation={atPageTop ? '0' : '4'}
@@ -35,42 +46,37 @@ const Header = () => {
       }>
       <Container maxWidth="lg">
         <HeaderWrapper>
-          <NavLink to="/" >
+          <LogoButton to="/" >
             <img src={logo} alt="Aegro" style={{ width: '100%' }} />
-          </NavLink>
+          </LogoButton>
           <div style={{ flexGrow: 1 }}></div>
-          <Navigation>
-            <NavWrapper>
-              <NavLink to="/">
-                Inicio
-              </NavLink>
-              <NavLink to="/sobre">
-                Sobre
-              </NavLink>
-              <NavLink to="/produto">
-                Aplicativo
-              </NavLink>
-              <NavLink to="https://blog.aegro.com.br" target="_blank">
-                Blog
-              </NavLink>
-              <NavLink to="/contato">
-                Contato
-              </NavLink>
-              <StyledButton to="https://app.aegro.com.br/login" target="_blank" variant="outlined">
-                Teste Grátis
-              </StyledButton>
-              <NavLink to="https://app.aegro.com.br/login" target="_blank">
-                Login
-              </NavLink>
-            </NavWrapper>
-          </Navigation>
+
+          <ButtonMenu color="inherit" onClick={handleOpenMenu} aria-label="menu">
+            <MenuIcon />
+          </ButtonMenu>
+
+          <Dialog fullScreen open={menuOpen} onClose={handleCloseMenu} >
+            <LogoButton to="/" style={{ position: 'absolute', top: '14px', left: '22px' }} >
+              <img src={logo} alt="Aegro" style={{ width: '100%' }} />
+            </LogoButton>
+            <FullScreenMenu style={{color: 'white'}}>
+              <Navigation />
+              <CloseButton color="inherit" onClick={handleCloseMenu} aria-label="close">
+                <CloseIcon />
+              </CloseButton>
+            </FullScreenMenu>
+          </Dialog>
+
+          <DesktopNav>
+            <Navigation />
+          </DesktopNav>
         </HeaderWrapper>
       </Container>
     </AppBar>
   )
 }
 
-export const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.div`
 
 display: flex;
 align-items: center;
@@ -87,7 +93,14 @@ padding-bottom: 14px;
 }
 `
 
-export const Navigation = styled.div`
+const LogoButton = styled(NavLink)`
+  max-width: 142px;
+  @media (min-width: 600px){
+    max-width: 135px;
+  }
+`
+
+const DesktopNav = styled.div`
   display: none;
   flex-grow: 1;
   max-width: 817px;
@@ -97,31 +110,31 @@ export const Navigation = styled.div`
   }
 `
 
-export const NavWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  color: white;
+const ButtonMenu = styled(IconButton)`
+  display: none;
+
+  @media (max-width: 959.95px) {
+    display: block;
+    min-width: 50px;
+  }
 `
 
-export const OutlinedNavLink = styled(NavLink)`
-  &.root {
-    max-height: 36px;
-    line-height: 1;
-    margin-left: 10px;
-    padding-top: 10px;
-    white-space: nowrap;
-    margin-right: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    border-color: white;
-    border-width: 1px;
-    border-style: solid;
+const FullScreenMenu = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00C65E;
+`
+
+const CloseButton = styled(IconButton)`
+  display: none;
+
+  @media (max-width: 959.95px) {
+    top: 29px;
+    right: 6px;
+    display: block;
+    position: fixed;
   }
 `
 

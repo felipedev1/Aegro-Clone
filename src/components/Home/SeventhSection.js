@@ -45,7 +45,7 @@ const SeventhSection = () => {
                 </StyledButton>
               </div>
             </Grid>
-            <Grid item sm={6}>
+            <Grid item xs={6}>
 
             </Grid>
           </Grid>
@@ -58,7 +58,7 @@ const SeventhSection = () => {
 const StyledSeventhSection = styled.section`
   height: 100vh;
   display: flex;
-  max-height: 640px;
+  max-height: 700px;
   min-height: 600px;
   align-items: flex-start;
   background-size: contain;

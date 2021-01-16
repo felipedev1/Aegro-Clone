@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
 import BackgroundImage from 'gatsby-background-image'
-import { Container, Typography } from '@material-ui/core'
+import { Button, Container, Typography } from '@material-ui/core'
 import { TypographyH1 } from '../SharedStyledComponents'
 import StyledButton from '../StyledButton'
 import arrowTopRight from '../../images/arrow-top-right.svg'
@@ -41,16 +41,22 @@ const FifthSection = () => {
             Seja um consultor Aegro e atenda sua carteira de clientes com o software de gestão agrícola mais utilizado do Brasil.
           </Description>
           <div>
-            <StyledButton 
+            <Button 
               variant="text" 
               color="secondary"
               to="https://conhecimento.aegro.com.br/contato-consultores" 
+              style={{
+                paddingLeft: '0px',
+                color: 'white',
+                fontSize: '16px',
+                letterSpacing: '1px',
+              }}
             >
               Seja uma consultoria aegro
               <span style={{marginLeft: '7px'}}>
                 <img src={arrowTopRight} alt />
               </span>
-            </StyledButton>
+            </Button>
           </div>
         </ContentWrapper>
       </Container>
@@ -91,7 +97,7 @@ const Title = styled(TypographyH1)`
 
   @media (max-width: 959.95px) {
     font-size: 26px;
-    max-width: 150px;
+    max-width: 200px;
   }
 `
 
