@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { AppBar, Container, Dialog, IconButton } from '@material-ui/core'
+import { AppBar, Container, Dialog, IconButton, Slide, useMediaQuery, useScrollTrigger } from '@material-ui/core'
 import styled from 'styled-components'
 import MenuIcon from '@material-ui/icons/Menu'
 import CloseIcon from '@material-ui/icons/Close'
@@ -9,6 +9,13 @@ import NavLink from "./NavLink"
 import Navigation from "./Navigation"
 
 const Header = () => {
+
+  const trigger = useScrollTrigger()
+
+  const inDesktop = useMediaQuery('(min-width:959.95px)') 
+
+  // always show the header if it is on the desktop, or hide the header on the mobile by scrolling
+  const showHeader = inDesktop || (!inDesktop < 959.95 && !trigger)
 
   const [atPageTop, setAtPageTop] = useState(true)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -36,43 +43,45 @@ const Header = () => {
 
 
   return (
-    <AppBar elevation={atPageTop ? '0' : '4'}
-      position={atPageTop ? 'absolute' : 'fixed'}
-      style={{
-        background: atPageTop ? 'transparent' : 'rgba(0, 198, 94)',
-        transform: 'none',
-        transition: 'transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms'
-      }
-      }>
-      <Container maxWidth="lg">
-        <HeaderWrapper>
-          <LogoButton to="/" >
-            <img src={logo} alt="Aegro" style={{ width: '100%' }} />
-          </LogoButton>
-          <div style={{ flexGrow: 1 }}></div>
-
-          <ButtonMenu color="inherit" onClick={handleOpenMenu} aria-label="menu">
-            <MenuIcon />
-          </ButtonMenu>
-
-          <Dialog fullScreen open={menuOpen} onClose={handleCloseMenu} >
-            <LogoButton to="/" style={{ position: 'absolute', top: '14px', left: '22px' }} >
+    <Slide appear={false} direction="down" in={showHeader} >
+      <AppBar elevation={atPageTop ? '0' : '4'}
+        position={atPageTop ? 'absolute' : 'fixed'}
+        style={{
+          background: atPageTop ? 'transparent' : 'rgba(0, 198, 94)',
+          transform: 'none',
+          transition: 'transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms'
+        }
+        }>
+        <Container maxWidth="lg">
+          <HeaderWrapper>
+            <LogoButton to="/" >
               <img src={logo} alt="Aegro" style={{ width: '100%' }} />
             </LogoButton>
-            <FullScreenMenu style={{color: 'white'}}>
-              <Navigation />
-              <CloseButton color="inherit" onClick={handleCloseMenu} aria-label="close">
-                <CloseIcon />
-              </CloseButton>
-            </FullScreenMenu>
-          </Dialog>
+            <div style={{ flexGrow: 1 }}></div>
 
-          <DesktopNav>
-            <Navigation />
-          </DesktopNav>
-        </HeaderWrapper>
-      </Container>
-    </AppBar>
+            <ButtonMenu color="inherit" onClick={handleOpenMenu} aria-label="menu">
+              <MenuIcon />
+            </ButtonMenu>
+
+            <Dialog fullScreen open={menuOpen} onClose={handleCloseMenu} >
+              <LogoButton to="/" style={{ position: 'absolute', top: '14px', left: '22px' }} >
+                <img src={logo} alt="Aegro" style={{ width: '100%' }} />
+              </LogoButton>
+              <FullScreenMenu style={{color: 'white'}}>
+                <Navigation />
+                <CloseButton color="inherit" onClick={handleCloseMenu} aria-label="close">
+                  <CloseIcon />
+                </CloseButton>
+              </FullScreenMenu>
+            </Dialog>
+
+            <DesktopNav>
+              <Navigation />
+            </DesktopNav>
+          </HeaderWrapper>
+        </Container>
+      </AppBar>
+    </Slide>
   )
 }
 
