@@ -2,7 +2,6 @@ import React from "react"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components'
-import Link from 'gatsby'
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import StyledButton from '../components/StyledButton'
@@ -19,7 +18,7 @@ import SeventhSection from "../components/Home/SeventhSection";
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO />
       <BannerBackground>
         <BannerContainer>
           <Container maxWidth="lg">
