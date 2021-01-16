@@ -131,7 +131,7 @@ const Footer = () => {
       </Container>
       <Container maxWidth="lg">
         <SocialNav>
-          <LogoAtBotton src={logo} alt />
+          <LogoAtBotton src={logo} alt="logo" />
           <Downloads>
             <a 
               href="https://play.google.com/store/apps/details?id=com.aegro.aegroapp"

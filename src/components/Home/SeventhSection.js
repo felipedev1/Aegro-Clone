@@ -40,7 +40,7 @@ const SeventhSection = () => {
                 <StyledButton variant="text" color="primary">
                   Acesse o Portal
                   <span style={{ marginLeft: '7px' }}>
-                    <img src={arrowTopRight} alt />
+                    <img src={arrowTopRight} alt="" />
                   </span>
                 </StyledButton>
               </div>

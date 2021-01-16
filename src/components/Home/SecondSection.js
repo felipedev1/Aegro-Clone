@@ -50,7 +50,7 @@ const SecondSection = () => {
                  >
                 Conheça o produto
                 <span style={{marginLeft: '3px'}}>
-                  <img src={arrowRight} alt />
+                  <img src={arrowRight} alt="" />
                 </span>
               </ButtonToProduct>
             </ContentWrapper>

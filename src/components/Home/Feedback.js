@@ -12,11 +12,11 @@ const Feedback = ({title, description, stickerProfile, name, uf}) => {
         </Typography>
         <div style={{flex: "1 1 0%"}}></div>
         <div style={{display: 'flex', height: "25px"}}>
-          <img src={star} style={{height: "100%"}} />
-          <img src={star} style={{height: "100%"}} />
-          <img src={star} style={{height: "100%"}} />
-          <img src={star} style={{height: "100%"}} />
-          <img src={star} style={{height: "100%"}} />
+          <img src={star} alt="" style={{height: "100%"}} />
+          <img src={star} alt="" style={{height: "100%"}} />
+          <img src={star} alt="" style={{height: "100%"}} />
+          <img src={star} alt="" style={{height: "100%"}} />
+          <img src={star} alt="" style={{height: "100%"}} />
         </div>
       </div>
       <div style={{flex: "1 1 0%", marginBottom: "5px"}}>
@@ -24,7 +24,7 @@ const Feedback = ({title, description, stickerProfile, name, uf}) => {
           {description}
         </Typography>
       </div>
-      <img src={stickerProfile} className="sticker" />
+      <img src={stickerProfile} alt="" className="sticker" />
       <div style={{display: "flex", marginTop: "10px"}}>
         <Typography variant="body1" compontent="p">{name}</Typography>
         <div style={{flex: "1 1 0%"}}></div>

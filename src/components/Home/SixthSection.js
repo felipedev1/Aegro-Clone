@@ -20,13 +20,13 @@ const SixthSection = () => {
                 <StyledButton to="https://blog.aegro.com.br/" variant="text" color="primary">
                   Acesse o blog
                   <span style={{marginLeft: '7px'}}>
-                    <img src={arrowTopRight} alt />
+                    <img src={arrowTopRight} alt="" />
                   </span>
                 </StyledButton>
               </div>
             </Grid>
             <Grid item sm={6} >
-              <BlogImg src={lavoura} />
+              <BlogImg src={lavoura} alt="" />
             </Grid>
           </Grid>
         </ContentWrapper>
