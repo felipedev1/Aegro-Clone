@@ -37,7 +37,7 @@ const SeventhSection = () => {
                 <Description variant="body1" component="p">
                   Criamos o Portal de Consultores Aegro para conectar consultorias especializadas à propriedades rurais. Através do Portal, você pesquisa os tipos de serviço que tem interesse e pode encontrar os parceiros da sua região.
                 </Description>
-                <StyledButton variant="text" color="primary">
+                <StyledButton to="https://portal-consultores.aegro.com.br/" target="_blank" variant="text" color="primary">
                   Acesse o Portal
                   <span style={{ marginLeft: '7px' }}>
                     <img src={arrowTopRight} alt="" />

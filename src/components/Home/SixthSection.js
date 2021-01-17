@@ -17,7 +17,7 @@ const SixthSection = () => {
                 <Title variant="h1" component="h1">
                   Conheça&nbsp;nosso canal&nbsp;de&nbsp;conteúdo Lavoura10
                 </Title>
-                <StyledButton to="https://blog.aegro.com.br/" variant="text" color="primary">
+                <StyledButton to="https://blog.aegro.com.br/" target="_blank" variant="text" color="primary">
                   Acesse o blog
                   <span style={{marginLeft: '7px'}}>
                     <img src={arrowTopRight} alt="" />
