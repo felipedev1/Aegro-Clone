@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { AppBar, Container, Dialog, IconButton, Slide, useMediaQuery, useScrollTrigger } from '@material-ui/core'
 import styled from 'styled-components'
-import MenuIcon from '@material-ui/icons/Menu'
-import CloseIcon from '@material-ui/icons/Close'
+import { MdClose, MdMenu } from 'react-icons/md'
 
 import logo from '../images/logo.svg'
 import NavLink from "./NavLink"
@@ -60,7 +59,7 @@ const Header = () => {
             <div style={{ flexGrow: 1 }}></div>
 
             <ButtonMenu color="inherit" onClick={handleOpenMenu} aria-label="menu">
-              <MenuIcon />
+              <MdMenu />
             </ButtonMenu>
 
             <Dialog fullScreen open={menuOpen} onClose={handleCloseMenu} >
@@ -70,7 +69,7 @@ const Header = () => {
               <FullScreenMenu style={{color: 'white'}}>
                 <Navigation />
                 <CloseButton color="inherit" onClick={handleCloseMenu} aria-label="close">
-                  <CloseIcon />
+                  <MdClose />
                 </CloseButton>
               </FullScreenMenu>
             </Dialog>
