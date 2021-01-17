@@ -1,15 +1,14 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import { Container, Typography } from '@material-ui/core'
+import { Container, Typography, useMediaQuery } from '@material-ui/core'
 
 import StyledButton from '../StyledButton'
 import { TypographyH1 } from '../sharedStyledComponents'
 import arrowRight from '../../images/arrow-right.svg'
-import useViewport from '../../utils/useViewport'
 
 const SecondSection = () => {
-  const { width } = useViewport()
+  const inMobile = useMediaQuery('(max-width:600px)')
 
   const data = useStaticQuery(graphql`
   query {
@@ -58,7 +57,7 @@ const SecondSection = () => {
         </div>
       </Division>
       <Division>
-        {width < 600 ?
+        {inMobile ?
         (
           <BackgroundMobile>
             <img src={mobileImage} alt="Colheiteira sobre o campo." />

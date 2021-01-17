@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { AppBar, Container, Tab } from '@material-ui/core'
+import { AppBar, Container, Tab, useMediaQuery } from '@material-ui/core'
 
 import StyledButton from '../StyledButton'
 import { TypographyH1 } from '../sharedStyledComponents'
@@ -8,8 +8,6 @@ import { TabList, TabContext } from '@material-ui/lab'
 import DemonstrationTabPanel from './DemonstrationTabPanel'
 import { graphql, useStaticQuery } from 'gatsby'
 import Slider from 'react-slick'
-
-import useViewport from '../../utils/useViewport'
 
 import operacionalVideo from '../../assets/videos/operacional.mp4'
 import financeiroVideo from '../../assets/videos/financeiro.mp4'
@@ -42,7 +40,7 @@ const ThirdSection = () => {
 
   const { estoqueGif, financeiroGif, indicadoresGif, patrimonioGif, operacionalGif } = data
 
-  const { width } = useViewport()
+  const inDesktop = useMediaQuery('(min-width:959.95px)')
   const [tabShown, setTabShown] = useState("1")
 
   return (
@@ -52,7 +50,7 @@ const ThirdSection = () => {
           <SectionTitle variant="h1" component="h1">
             Mais controle sobre sua fazenda
           </SectionTitle>
-          {width > 959 ? (
+          {inDesktop ? (
             <TabContext value={tabShown}>
               <SectionHeader position="static" elevation={0}>
                 <StyledTabList
