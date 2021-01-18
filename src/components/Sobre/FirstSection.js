@@ -5,8 +5,6 @@ import BackgroundImage from 'gatsby-background-image'
 import { Container, Typography } from '@material-ui/core'
 import { HiOutlineArrowDown } from 'react-icons/hi'
 import StyledButton from '../StyledButton'
-
-import { Link } from 'gatsby'
 import AnchorScrollButton from '../AnchorScrollButton'
 
 const FirstSection = () => {
@@ -57,7 +55,7 @@ const FirstSection = () => {
             <SecondTitle variant="h1" component="h1">
               Por isso, somos parceiros de quem produz.
               </SecondTitle>
-            <AnchorScrollButton compontent={Link} scrollTo="#manifesto" >
+            <AnchorScrollButton component="a" scrollTo="#manifesto" >
               <HiOutlineArrowDown size={24} />
             </AnchorScrollButton>
           </BannerWrapper>
