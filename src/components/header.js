@@ -58,7 +58,7 @@ const Header = () => {
             </LogoButton>
             <div style={{ flexGrow: 1 }}></div>
 
-            <ButtonMenu color="inherit" onClick={handleOpenMenu} aria-label="menu">
+            <ButtonMenu onClick={handleOpenMenu} aria-label="menu">
               <MdMenu />
             </ButtonMenu>
 
@@ -68,7 +68,7 @@ const Header = () => {
               </LogoButton>
               <FullScreenMenu style={{color: 'white'}}>
                 <Navigation />
-                <CloseButton color="inherit" onClick={handleCloseMenu} aria-label="close">
+                <CloseButton onClick={handleCloseMenu} aria-label="close">
                   <MdClose />
                 </CloseButton>
               </FullScreenMenu>
@@ -120,6 +120,7 @@ const DesktopNav = styled.div`
 
 const ButtonMenu = styled(IconButton)`
   display: none;
+  color: #FFF;
 
   @media (max-width: 959.95px) {
     display: block;
@@ -137,6 +138,7 @@ const FullScreenMenu = styled.div`
 
 const CloseButton = styled(IconButton)`
   display: none;
+  color: #FFF;
 
   @media (max-width: 959.95px) {
     top: 29px;
