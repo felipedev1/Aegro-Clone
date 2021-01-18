@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Container, Typography, useMediaQuery } from '@material-ui/core'
 
 import StyledButton from '../StyledButton'
-import { TypographyH1 } from '../sharedStyledComponents'
+
 import arrowRight from '../../images/arrow-right.svg'
 
 const SecondSection = () => {
@@ -114,7 +114,7 @@ const ContentWrapper = styled.div`
   }
 `
 
-const Title = styled(TypographyH1)`
+const Title = styled(Typography)`
   color: #333333;
   margin-top: 20px;
   margin-bottom: 40px;

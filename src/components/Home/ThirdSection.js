@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { AppBar, Container, Tab, useMediaQuery } from '@material-ui/core'
+import { AppBar, Container, Tab, Typography, useMediaQuery } from '@material-ui/core'
 
 import StyledButton from '../StyledButton'
-import { TypographyH1 } from '../sharedStyledComponents'
+
 import { TabList, TabContext } from '@material-ui/lab'
 import DemonstrationTabPanel from './DemonstrationTabPanel'
 import { graphql, useStaticQuery } from 'gatsby'
@@ -131,7 +131,7 @@ const ContentWrapper = styled.div`
   }
 `
 
-const SectionTitle = styled(TypographyH1)`
+const SectionTitle = styled(Typography)`
   max-width: 450px;
   text-align: center;
 

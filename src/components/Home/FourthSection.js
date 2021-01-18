@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Typography } from '@material-ui/core'
 import styled from 'styled-components'
-import { TypographyH1 } from '../sharedStyledComponents'
+
 import Slider from 'react-slick'
 import Feedback from './Feedback'
 import VitorFernandoImg from '../../images/VitorFernando.png'
@@ -116,7 +116,7 @@ const MainSectionContent = styled.div`
   }
 `
 
-const Title = styled(TypographyH1)`
+const Title = styled(Typography)`
   color: #333333;
   margin-bottom: 20px;
 

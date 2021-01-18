@@ -1,12 +1,11 @@
 import React from 'react'
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
 import BackgroundImage from 'gatsby-background-image'
 import { Button, Container, Typography } from '@material-ui/core'
-import { TypographyH1 } from '../sharedStyledComponents'
+
 import arrowTopRight from '../../images/arrow-top-right.svg'
-import StyledButton from '../StyledButton'
 
 const FifthSection = () => {
   const data = useStaticQuery(
@@ -41,7 +40,7 @@ const FifthSection = () => {
             Seja um consultor Aegro e atenda sua carteira de clientes com o software de gestão agrícola mais utilizado do Brasil.
           </Description>
           <div>
-            <StyledButton
+            <Button
               variant="text" 
               color="secondary"
               to="https://conhecimento.aegro.com.br/contato-consultores" 
@@ -57,7 +56,7 @@ const FifthSection = () => {
               <span style={{marginLeft: '7px'}}>
                 <img src={arrowTopRight} alt="" />
               </span>
-            </StyledButton>
+            </Button>
           </div>
         </ContentWrapper>
       </Container>
@@ -93,7 +92,7 @@ const ContentWrapper = styled.div`
   }
 ` 
 
-const Title = styled(TypographyH1)`
+const Title = styled(Typography)`
   max-width: 350px;
 
   @media (max-width: 959.95px) {

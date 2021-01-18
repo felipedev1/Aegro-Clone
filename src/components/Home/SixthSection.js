@@ -1,9 +1,9 @@
 import React from 'react'
-import { Container, Grid } from '@material-ui/core'
+import { Container, Grid, Typography } from '@material-ui/core'
 import styled from 'styled-components'
 import arrowTopRight from '../../images/arrow-top-right-green.svg'
 import lavoura from '../../images/lavoura10.png'
-import { TypographyH1 } from '../sharedStyledComponents'
+
 import StyledButton from '../StyledButton'
 
 const SixthSection = () => {
@@ -58,7 +58,7 @@ const ContentWrapper = styled.div`
   }
 `
 
-const Title = styled(TypographyH1)`
+const Title = styled(Typography)`
   color: #FFECCB;
   max-width: 420px;
   margin-bottom: 30px;

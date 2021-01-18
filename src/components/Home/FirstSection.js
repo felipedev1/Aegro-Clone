@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
-import { Container } from '@material-ui/core'
+import { Container, Typography } from '@material-ui/core'
 import StyledButton from '../StyledButton'
-import { TypographyH1 } from '../sharedStyledComponents'
+
 
 const FirstSection = () => {
   const data = useStaticQuery(
@@ -43,7 +43,7 @@ const FirstSection = () => {
               </SecondTitle>
             <ButtonToApp to="/produto" variant="contained" color="primary" >
               Conheça o Aegro
-              </ButtonToApp>
+            </ButtonToApp>
           </BannerWrapper>
         </Container>
       </BannerContainer>
@@ -79,7 +79,7 @@ const BannerWrapper = styled.div`
   }
 `
 
-const FirstTitle = styled(TypographyH1)`
+const FirstTitle = styled(Typography)`
   margin: 0 auto 0 0;
   max-width: 600px;
 
@@ -89,7 +89,7 @@ const FirstTitle = styled(TypographyH1)`
   }
 `
 
-const SecondTitle = styled(TypographyH1)`
+const SecondTitle = styled(Typography)`
   margin-bottom: 55px;
   max-width: 600px;
 
