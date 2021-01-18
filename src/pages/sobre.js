@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import FirstSection from '../components/Sobre/FirstSection'
 import SecondSection from '../components/Sobre/SecondSection'
+import ThirdSection from '../components/Sobre/ThirdSection'
 
 const sobre = () => {
   return (
@@ -10,6 +11,7 @@ const sobre = () => {
       <SEO title="Sobre" />
       <FirstSection />
       <SecondSection />
+      <ThirdSection />
       <section style={{
         height: '70vh',
         display: 'flex',
