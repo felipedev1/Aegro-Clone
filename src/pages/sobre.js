@@ -2,13 +2,15 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import FirstSection from '../components/Sobre/FirstSection'
+import SecondSection from '../components/Sobre/SecondSection'
 
 const sobre = () => {
   return (
     <Layout>
       <SEO title="Sobre" />
       <FirstSection />
-      <section id="manifesto" style={{
+      <SecondSection />
+      <section style={{
         height: '70vh',
         display: 'flex',
         alignItems: 'center',
