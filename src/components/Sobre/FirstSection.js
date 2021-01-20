@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 import { Container, Typography } from '@material-ui/core'
 import { HiOutlineArrowDown } from 'react-icons/hi'
-import StyledButton from '../StyledButton'
 import AnchorScrollButton from '../AnchorScrollButton'
 
 const FirstSection = () => {
@@ -101,17 +100,6 @@ const SecondTitle = styled(Typography)`
 
   @media (max-width: 959.95px) {
     margin-bottom: 90px;
-  }
-`
-
-const ButtonToApp = styled(StyledButton)`
-  @media (max-width: 959.95px) {
-    font-size: 18px;
-    padding-top: 7px;
-    padding-left: 30px;
-    padding-right: 30px;
-    letter-spacing: 2.4px;
-    padding-bottom: 7px;
   }
 `
 

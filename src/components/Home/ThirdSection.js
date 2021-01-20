@@ -8,13 +8,13 @@ import { TabList, TabContext } from '@material-ui/lab'
 import DemonstrationTabPanel from './DemonstrationTabPanel'
 import { graphql, useStaticQuery } from 'gatsby'
 import Slider from 'react-slick'
+import DemonstrationSlide from './DemonstrationSlide'
 
 import operacionalVideo from '../../assets/videos/operacional.mp4'
 import financeiroVideo from '../../assets/videos/financeiro.mp4'
 import estoqueVideo from '../../assets/videos/estoque.mp4'
-import patrimonioVideo from '../../assets/videos/operacional.mp4'
+import patrimonioVideo from '../../assets/videos/patrimonio.mp4'
 import indicadoresVideo from '../../assets/videos/indicadores.mp4'
-import DemonstrationSlide from './DemonstrationSlide'
 
 const ThirdSection = () => {
   const data = useStaticQuery(graphql`
