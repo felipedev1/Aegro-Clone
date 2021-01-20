@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import FirstSection from '../components/Produto/FirstSection'
+import FourthSection from '../components/Produto/FourthSection'
 import SecondSection from '../components/Produto/SecondSection'
 import ThirdSection from '../components/Produto/ThirdSection'
 import SEO from '../components/seo'
@@ -12,6 +13,7 @@ const produto = () => {
       <FirstSection />
       <SecondSection />
       <ThirdSection />
+      <FourthSection />
       <section style={{
         height: '70vh',
         display: 'flex',
