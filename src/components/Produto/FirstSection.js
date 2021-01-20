@@ -120,6 +120,10 @@ const Downloads = styled.div`
   @media (max-width: 599.95px) {
     margin-bottom: 60px;
   }
+
+  @media (max-width: 370px) {
+    margin-top: 20px;
+  }
 `
 
 export default FirstSection
