@@ -1,9 +1,10 @@
 import React from 'react'
 import Layout from '../components/layout'
 import FirstSection from '../components/Produto/FirstSection'
-import FourthSection from '../components/Produto/FourthSection'
 import SecondSection from '../components/Produto/SecondSection'
 import ThirdSection from '../components/Produto/ThirdSection'
+import FourthSection from '../components/Produto/FourthSection'
+import FifthSection from '../components/Produto/FifthSection'
 import SEO from '../components/seo'
 
 const produto = () => {
@@ -14,17 +15,7 @@ const produto = () => {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
-      <section style={{
-        height: '70vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        backgroundColor: '#777',
-      }}>
-        <h1>TO DO</h1>
-        <p>Esta página está em construção  <span role="image">🚧</span></p>
-      </section>
+      <FifthSection />
     </Layout>
   )
 }
