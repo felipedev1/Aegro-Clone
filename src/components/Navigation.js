@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import NavLink from './NavLink'
 import StyledButton from './StyledButton'
 
-const Navigation = () => {
+const Navigation = ({color}) => {
   return (
-    <StyledNavigation>
+    <StyledNavigation style={{color}}>
       <NavLink to="/">
         Inicio
       </NavLink>

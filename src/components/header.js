@@ -3,11 +3,15 @@ import { AppBar, Container, Dialog, IconButton, Slide, useMediaQuery, useScrollT
 import styled from 'styled-components'
 import { MdClose, MdMenu } from 'react-icons/md'
 
-import logo from '../images/logo.svg'
+import logoDefault from '../images/logo.svg'
+import logoSecondary from '../images/logo-secondary.svg'
 import NavLink from "./NavLink"
 import Navigation from "./Navigation"
 
-const Header = () => {
+const Header = ({color}) => {
+
+  const pageTopColor = color === 'secondary' ? 'rgb(0, 198, 94)' : '#FFF'
+  const pageTopLogo = color === 'secondary' ? logoSecondary : logoDefault
 
   const trigger = useScrollTrigger()
 
@@ -43,10 +47,11 @@ const Header = () => {
 
   return (
     <Slide appear={false} direction="down" in={showHeader} >
-      <AppBar elevation={atPageTop ? '0' : '4'}
+      <AppBar elevation={atPageTop ? 0 : 4}
         position={atPageTop ? 'absolute' : 'fixed'}
         style={{
           background: atPageTop ? 'transparent' : 'rgba(0, 198, 94)',
+          color: atPageTop ? pageTopColor : '#FFF',
           transform: 'none',
           transition: 'transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms'
         }
@@ -54,17 +59,17 @@ const Header = () => {
         <Container maxWidth="lg">
           <HeaderWrapper>
             <LogoButton to="/" >
-              <img src={logo} alt="Aegro" style={{ width: '100%' }} />
+              <img src={atPageTop ? pageTopLogo : logoDefault} alt="Aegro" style={{ width: '100%' }} />
             </LogoButton>
             <div style={{ flexGrow: 1 }}></div>
 
             <ButtonMenu onClick={handleOpenMenu} aria-label="menu">
-              <MdMenu />
+              <MdMenu color={atPageTop ? pageTopColor : '#FFF'} />
             </ButtonMenu>
 
             <Dialog fullScreen open={menuOpen} onClose={handleCloseMenu} >
               <LogoButton to="/" style={{ position: 'absolute', top: '14px', left: '22px' }} >
-                <img src={logo} alt="Aegro" style={{ width: '100%' }} />
+                <img src={logoDefault} alt="Aegro" style={{ width: '100%' }} />
               </LogoButton>
               <FullScreenMenu style={{color: 'white'}}>
                 <Navigation />
@@ -75,7 +80,7 @@ const Header = () => {
             </Dialog>
 
             <DesktopNav>
-              <Navigation />
+              <Navigation color={atPageTop ? pageTopColor : '#FFF'} />
             </DesktopNav>
           </HeaderWrapper>
         </Container>
@@ -120,7 +125,6 @@ const DesktopNav = styled.div`
 
 const ButtonMenu = styled(IconButton)`
   display: none;
-  color: #FFF;
 
   @media (max-width: 959.95px) {
     display: block;

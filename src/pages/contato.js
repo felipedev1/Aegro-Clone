@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Container} from '@material-ui/core'
 import Layout from '../components/layout'
+import Header from '../components/header'
 import SEO from '../components/seo'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from 'gatsby'
@@ -20,6 +21,7 @@ const contato = ({data}) => {
   return (
     <Layout>
       <SEO title="Contato" />
+      <Header color="secondary" />
       <StyledContact>
         <HalfDiv>
           <div style={{flex: 1}}></div>

@@ -11,11 +11,13 @@ import FourthSection from "../components/Home/FourthSection"
 import FifthSection from "../components/Home/FifthSection";
 import SixthSection from "../components/Home/SixthSection";
 import SeventhSection from "../components/Home/SeventhSection";
+import Header from "../components/header";
 
 const IndexPage = () => {
   return (
     <Layout>
       <SEO />
+      <Header />
       <FirstSection />
       <SecondSection />
       <ThirdSection />

@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from '../components/header'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import FirstSection from '../components/Sobre/FirstSection'
@@ -10,6 +11,7 @@ const sobre = () => {
   return (
     <Layout>
       <SEO title="Sobre" />
+      <Header />
       <FirstSection />
       <SecondSection />
       <ThirdSection />

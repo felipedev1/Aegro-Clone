@@ -6,11 +6,13 @@ import ThirdSection from '../components/Produto/ThirdSection'
 import FourthSection from '../components/Produto/FourthSection'
 import FifthSection from '../components/Produto/FifthSection'
 import SEO from '../components/seo'
+import Header from '../components/header'
 
 const produto = () => {
   return (
     <Layout>
       <SEO title="Produto" />
+      <Header />
       <FirstSection />
       <SecondSection />
       <ThirdSection />
