@@ -15,16 +15,16 @@ const Navigation = ({color}) => {
       <NavLink to="/produto">
         Aplicativo
       </NavLink>
-      <NavLink to="https://blog.aegro.com.br" target="_blank">
+      <NavLink href="https://blog.aegro.com.br" component="a" target="_blank">
         Blog
       </NavLink>
       <NavLink to="/contato">
         Contato
       </NavLink>
-      <StyledButton to="https://app.aegro.com.br/login" target="_blank" variant="outlined">
+      <StyledButton href="https://app.aegro.com.br/login" component="a" target="_blank" variant="outlined">
         Teste Grátis
       </StyledButton>
-      <NavLink to="https://app.aegro.com.br/login" target="_blank">
+      <NavLink href="https://app.aegro.com.br/login" component="a" target="_blank">
         Login
       </NavLink>
     </StyledNavigation>

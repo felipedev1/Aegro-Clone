@@ -43,7 +43,8 @@ const FifthSection = () => {
             <Button
               variant="text" 
               color="secondary"
-              to="https://conhecimento.aegro.com.br/contato-consultores" 
+              component="a"
+              href="https://conhecimento.aegro.com.br/contato-consultores" 
               target="_blank"
               style={{
                 paddingLeft: '0px',

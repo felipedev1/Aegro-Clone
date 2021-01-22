@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import { Container, Typography } from '@material-ui/core'
 import StyledButton from '../StyledButton'
 
@@ -56,6 +56,7 @@ const FifthSection = () => {
           <ButtonsWrapper>
             <StyledButton variant="contained" color="primary" 
               style={{width: '229px'}}
+              component={Link}
               to="/contato"
             >
               Saiba mais

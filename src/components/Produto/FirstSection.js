@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button, Container, Typography } from '@material-ui/core'
-import { Link } from 'gatsby'
 import { HiOutlineArrowDown } from 'react-icons/hi'
 import AnchorScrollButton from '../AnchorScrollButton'
 import googlePlay from '../../images/googlePlay.svg'
@@ -40,15 +39,15 @@ const FirstSection = () => {
             </div>
             <div style={{flex: 1}}></div>
             <Downloads>
-              <Button component={Link} variant="text"
-                to="https://play.google.com/store/apps/details?id=com.aegro.aegroapp"
+              <Button component="a" variant="text"
+                href="https://play.google.com/store/apps/details?id=com.aegro.aegroapp"
                 target="_blank"
                 style={{width: '49.3625%', padding: 0}}
               >
                 <img src={googlePlay} alt="Disponivel no Google Play" width="100%" />
               </Button>
-              <Button component={Link} variant="text"
-                to="https://apps.apple.com/br/app/aegro-gest%C3%A3o-rural/id1105392365"
+              <Button component="a" variant="text"
+                href="https://apps.apple.com/br/app/aegro-gest%C3%A3o-rural/id1105392365"
                 target="_blank"
                 style={{width: '43.76%', padding: 0}}
               >

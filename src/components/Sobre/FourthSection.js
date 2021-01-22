@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button, Container, Typography } from '@material-ui/core'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { BsArrowRightShort } from 'react-icons/bs'
 
 const FourthSection = () => {
@@ -62,8 +62,8 @@ const FourthSection = () => {
               <Button 
                 variant="text"
                 color="primary"
-                component={Link}
-                to="https://jobs.kenoby.com/aegro"
+                component="a"
+                href="https://jobs.kenoby.com/aegro"
                 target="_blank"
               >
                 Cadastre-se

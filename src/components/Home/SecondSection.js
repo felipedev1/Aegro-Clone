@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { Container, Typography, useMediaQuery } from '@material-ui/core'
 
@@ -43,7 +43,7 @@ const SecondSection = () => {
               <Description variant="body1" component="p">
                 centralizando todas as informações em um software de gestão agrícola que dá ao produtor rural mais controle sobre os investimentos e os processos produtivos da fazenda.
               </Description>
-              <ButtonToProduct to="/produto" 
+              <ButtonToProduct component={Link} to="/produto" 
                 variant="text" 
                 color="primary"
                  >

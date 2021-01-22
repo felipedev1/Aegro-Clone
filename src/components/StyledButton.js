@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 import { Button } from '@material-ui/core'
 
 const StyledButton = ({children, ...rest}) => {
   return (
     <ButtonStyles 
       color="inherit" 
-      component={Link} 
+      component="a" 
       disableElevation 
       {...rest}
     >

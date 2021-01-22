@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
 import { Container, Typography } from '@material-ui/core'
@@ -41,7 +41,7 @@ const FirstSection = () => {
             <SecondTitle variant="h1" component="h1">
               Por isso, somos parceiros de quem produz.
               </SecondTitle>
-            <ButtonToApp to="/produto" variant="contained" color="primary" >
+            <ButtonToApp component={Link} to="/produto" variant="contained" color="primary" >
               Conheça o Aegro
             </ButtonToApp>
           </BannerWrapper>

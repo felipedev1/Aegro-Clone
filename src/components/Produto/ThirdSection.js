@@ -8,6 +8,7 @@ import ilustra2 from '../../images/ilustra2.png'
 import ilustra3 from '../../images/ilustra3.png'
 import ilustra4 from '../../images/ilustra4.png'
 import ilustra5 from '../../images/ilustra5.png'
+import { Link } from 'gatsby'
 
 const ThirdSection = () => {
   const inDesktop = useMediaQuery('(min-width:960px)')
@@ -49,9 +50,10 @@ const ThirdSection = () => {
                 </ItemDescription>
                 {inDesktop && (
                   <StyledButton
-                    to="/contact"
+                    component={Link}
+                    to="/contato"
                     variant="outlined"
-                    style={{ marginTop: '25px'}}
+                    style={{ marginTop: '25px' }}
                   >
                     Fale conosco
                   </StyledButton>
@@ -64,7 +66,8 @@ const ThirdSection = () => {
               </Grid>
               {!inDesktop && (
                 <StyledButton
-                  to="/contact"
+                  component={Link}
+                  to="/contato"
                   variant="outlined"
                   style={{ marginTop: '25px', width: '100%' }}
                 >
@@ -107,7 +110,7 @@ const ThirdSection = () => {
               </Grid>
             </Grid>
           </ItemWrapper>
-          <ItemWrapper style={{paddingBottom: "0"}}>
+          <ItemWrapper style={{ paddingBottom: "0" }}>
             <Grid container alignItems="center">
               <Grid item sm={6}>
                 <ItemTitle variant="h2" component="h2">
@@ -124,7 +127,11 @@ const ThirdSection = () => {
               </Grid>
             </Grid>
             <Grid container justify="center">
-              <ButtonToPlans to="/planos" variant="contained" color="secondary">
+              <ButtonToPlans
+                component={Link}
+                to="/planos"
+                variant="contained"
+                color="secondary">
                 Conheça nossos planos
               </ButtonToPlans >
             </Grid>

@@ -6,7 +6,7 @@ import StyledButton from '../StyledButton'
 
 import { TabList, TabContext } from '@material-ui/lab'
 import DemonstrationTabPanel from './DemonstrationTabPanel'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import Slider from 'react-slick'
 import DemonstrationSlide from './DemonstrationSlide'
 
@@ -87,6 +87,7 @@ const ThirdSection = () => {
 
           <div>
             <ButtonToApp
+              component={Link}
               to="/produto"
               disableElevation
               variant="contained"

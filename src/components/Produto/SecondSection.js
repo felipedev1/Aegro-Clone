@@ -22,6 +22,7 @@ import cadernoGif from '../../images/caderno-de-campo.gif'
 import patrimonioGif from '../../images/patrimonio.gif'
 import comercializacaoGif from '../../images/comercializacao.gif'
 import indicadoresAgricolasGif from '../../images/indicadores-agricolas.gif'
+import { Link } from 'gatsby'
 
 const SecondSection = () => {
 
@@ -98,7 +99,12 @@ const SecondSection = () => {
                   flexDirection="column"
                 >
                   <FeatureVideo videoSrc={VideoShown} />
-                  <InternalStyledButton variant="contained" color="primary" to="/contato">
+                  <InternalStyledButton 
+                    variant="contained"
+                    color="primary"
+                    component={Link}  
+                    to="/contato"
+                  >
                     Peça uma demonstração aegro
                   </InternalStyledButton>
                 </Box>
@@ -142,7 +148,12 @@ const SecondSection = () => {
                       gifUrl={indicadoresAgricolasGif}
                     />
                   </StyledSlider>
-                  <InternalStyledButton variant="contained" color="primary" to="/contato">
+                  <InternalStyledButton 
+                    variant="contained" 
+                    color="primary" 
+                    component={Link}
+                    to="/contato"
+                  >
                     Peça uma demonstração aegro
                   </InternalStyledButton>
                 </div>

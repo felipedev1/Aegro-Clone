@@ -36,7 +36,7 @@ const contato = ({data}) => {
           <BackgroundImage 
             Tag="div"
             fluid={sources}
-            backgroundColor={`#00C65E`}
+            backgroundColor={`#FFF`}
             style={{minHeight: '100vh', width: '100%'}}
           />
         </HalfDiv>

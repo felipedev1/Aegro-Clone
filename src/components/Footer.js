@@ -12,6 +12,7 @@ import facebook from '../images/facebook.svg'
 import instagram from '../images/instagram.svg'
 import youtube from '../images/youtube.svg'
 import linkedin from '../images/linkedin.svg'
+import { Link } from 'gatsby'
 
 const Footer = () => {
   return (
@@ -22,22 +23,22 @@ const Footer = () => {
           <NavFlexItem>
             <Typography variant="h2" compontent="h2">Aegro</Typography>
             <StyledButton variant="text" color="secondary"
-              to="https://conhecimento.aegro.com.br/contato-consultores"
+              href="https://conhecimento.aegro.com.br/contato-consultores"
               target="_blank"
             >
               Programa de Parcerias
             </StyledButton>
-            <StyledButton variant="text" color="secondary" to="/sobre">
+            <StyledButton variant="text" color="secondary" component={Link} to="/sobre">
               Quem Somos
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-              to="https://jobs.kenoby.com/aegro"
+              href="https://jobs.kenoby.com/aegro"
               target="_blank"
             >
               Trabalhe Conosco
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-              to="https://aegro.com.br/compartilhando-beneficios"
+              href="https://aegro.com.br/compartilhando-beneficios"
               target="_blank"
             >
               Compartilhando Benefícios
@@ -46,13 +47,13 @@ const Footer = () => {
 
           <NavFlexItem>
             <Typography variant="h2" compontent="h2">Produto</Typography>
-            <StyledButton variant="text" color="secondary" to="/produto">
+            <StyledButton variant="text" color="secondary" component={Link} to="/produto">
               Aplicativo
             </StyledButton>
-            <StyledButton variant="text" color="secondary" to="/produto#integracoes">
+            <StyledButton variant="text" color="secondary" component={Link} to="/produto#integracoes">
               Integrações
             </StyledButton>
-            <StyledButton variant="text" color="secondary" to="/">
+            <StyledButton variant="text" color="secondary" component={Link} to="/">
               Planos
             </StyledButton>
           </NavFlexItem>
@@ -60,19 +61,19 @@ const Footer = () => {
           <NavFlexItem>
             <Typography variant="h2" compontent="h2">Conteúdo</Typography>
             <StyledButton variant="text" color="secondary"
-              to="https://blog.aegro.com.br/"
+              href="https://blog.aegro.com.br/"
               target="_blank"
             >
               Blog Lavoura 10
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-              to="https://cursos.aegro.com.br/"
+              href="https://cursos.aegro.com.br/"
               target="_blank"
             >
               Treinamentos
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-              to="https://suporte.aegro.com.br/"
+              href="https://suporte.aegro.com.br/"
               target="_blank"
             >
               Central de Ajuda
@@ -82,21 +83,19 @@ const Footer = () => {
           <NavFlexItem>
             <Typography variant="h2" compontent="h2">Fale Conosco</Typography>
             <StyledButton variant="text" color="secondary"
-              compontent="a"
               href="tel:+555131039490"
               target="_blank"
             >
               (51) 3103-9490
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-              compontent="a"
               href="mailto:contato@aegro.com.br"
               target="_blank"
             >
               contato@aegro.com.br
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-              to="https://api.whatsapp.com/send?phone=5551997859135&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Aegro"
+              href="https://api.whatsapp.com/send?phone=5551997859135&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Aegro"
               target="_blank"
             >
               (51) 99785-9135
@@ -109,19 +108,19 @@ const Footer = () => {
           <NavFlexItem>
             <Typography variant="h2" compontent="h2">Transparência</Typography>
             <StyledButton variant="text" color="secondary"
-              to="https://aegro.com.br/politica-de-privacidade"
+              href="https://aegro.com.br/politica-de-privacidade"
               target="_blank"
             >
               Políticas de Privacidade
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-              to="https://aegro.com.br/termos-de-uso"
+              href="https://aegro.com.br/termos-de-uso"
               target="_blank"
             >
               Termos de Uso
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-              to="https://aegro.com.br/pt/downloads/manual-aegro-maio-2019.pdf"
+              href="https://aegro.com.br/pt/downloads/manual-aegro-maio-2019.pdf"
               target="_blank"
             >
               Manual do Usuário
@@ -159,38 +158,38 @@ const Footer = () => {
           </div>
           <SocialNetworks>
             <StyledButton variant="text" color="secondary"
-                to="https://blog.aegro.com.br/"
-                target="_blank"
+              href="https://blog.aegro.com.br/"
+              target="_blank"
             >
               <img src={blogAegro} alt="blog" />
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-                to="https://api.whatsapp.com/send?phone=5551997859135&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Aegro"
-                target="_blank"
+              href="https://api.whatsapp.com/send?phone=5551997859135&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Aegro"
+              target="_blank"
             >
               <img src={whatsapp} alt="whatsapp" />
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-                to="https://www.facebook.com/aegro/"
-                target="_blank"
+              href="https://www.facebook.com/aegro/"
+              target="_blank"
             >
               <img src={facebook} alt="facebook" />
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-                to="https://www.instagram.com/aegrofarming/"
-                target="_blank"
+              href="https://www.instagram.com/aegrofarming/"
+              target="_blank"
             >
               <img src={instagram} alt="instagram" />
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-                to="https://www.youtube.com/channel/UCFhEvVp1JKWNI8-eGzjxOYw"
-                target="_blank"
+              href="https://www.youtube.com/channel/UCFhEvVp1JKWNI8-eGzjxOYw"
+              target="_blank"
             >
               <img src={youtube} alt="youtube" />
             </StyledButton>
             <StyledButton variant="text" color="secondary"
-                to="https://www.linkedin.com/company/aegro/"
-                target="_blank"
+              href="https://www.linkedin.com/company/aegro/"
+              target="_blank"
             >
               <img src={linkedin} alt="linkedin" />
             </StyledButton>
