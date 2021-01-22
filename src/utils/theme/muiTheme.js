@@ -61,11 +61,22 @@ const theme = createMuiTheme({
         }
       },
       outlined: {
-        border: '1px solid #FFF',
+        borderWidth: '1px',
+        borderStyle: 'solid',
         padding: '5px 15px',
+        background: 'transparent',
       },
       outlinedPrimary: {
-        background: 'transparent',
+        borderColor: '#00C65E',
+        color: '#00C65E',
+        '&:hover': {
+          textDecoration: 'none',
+          backgroundColor: 'rgba(0, 0, 0, 0.04)',
+          borderColor: '#00C65E'
+        }
+      },
+      outlinedSecondary: {
+        borderColor: '#FFF',
         color: '#FFF',
         '&:hover': {
           textDecoration: 'none',

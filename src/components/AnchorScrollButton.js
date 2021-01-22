@@ -24,12 +24,10 @@ const AnchorScrollButton = ({children, scrollTo, ...rest}) => {
 
 const StyledAnchorScrollButton = styled(Button)`
   width: 40px;
-  border: 1px solid white;
   max-height: 68px;
   height: 40px;
   padding: 12px;
   border-radius: 0 100px 100px 100px;
-  background-color: white;
 
   @media (max-width:959.95px) {
     min-width: 0;
