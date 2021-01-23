@@ -23,9 +23,9 @@ const AnchorScrollButton = ({children, scrollTo, ...rest}) => {
 }
 
 const StyledAnchorScrollButton = styled(Button)`
-  width: 40px;
-  max-height: 68px;
-  height: 40px;
+  width: 50px;
+  max-height: 72px;
+  height: 50px;
   padding: 12px;
   border-radius: 0 100px 100px 100px;
 
