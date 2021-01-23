@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Header from '../components/header'
 import FirstSection from '../components/Planos/FirstSection'
+import SecondSection from '../components/Planos/SecondSection'
 
 const planos = () => {
   return (
@@ -10,6 +11,7 @@ const planos = () => {
       <SEO title="Planos" />
       <Header color="secondary" />
       <FirstSection />
+      <SecondSection />
     </Layout>
   )
 }
