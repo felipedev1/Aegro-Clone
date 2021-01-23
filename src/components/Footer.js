@@ -53,7 +53,7 @@ const Footer = () => {
             <StyledButton variant="text" color="secondary" component={Link} to="/produto#integracoes">
               Integrações
             </StyledButton>
-            <StyledButton variant="text" color="secondary" component={Link} to="/">
+            <StyledButton variant="text" color="secondary" component={Link} to="/planos">
               Planos
             </StyledButton>
           </NavFlexItem>

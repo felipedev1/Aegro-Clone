@@ -4,6 +4,7 @@ import SEO from '../components/seo'
 import Header from '../components/header'
 import FirstSection from '../components/Planos/FirstSection'
 import SecondSection from '../components/Planos/SecondSection'
+import ThirdSection from '../components/Planos/ThirdSection'
 
 const planos = () => {
   return (
@@ -12,6 +13,7 @@ const planos = () => {
       <Header color="secondary" />
       <FirstSection />
       <SecondSection />
+      <ThirdSection />
     </Layout>
   )
 }
